@@ -1,12 +1,12 @@
 * {
   background-color: rgb(230,230, 230);
 }
-.section {
+.section, .section * {
   background-color:rgb(57, 255, 20);
   border:1px solid black;
   border-radius: .5em;
 }
-nav {
+nav, nav * {
   display:grid;
   border: 1px solid black;
   background-color: lightblue;
