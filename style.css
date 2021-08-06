@@ -6,7 +6,7 @@
 
 }
 .section * {
-  margin: auto;
+  padding-left: 5px;
 }
 .section {
   border:1px solid black;
@@ -16,6 +16,7 @@
 nav {
   display:grid;
   border: 1px solid black;
+  border-radius: 1em;
   background-color: lightblue;
   grid-template-columns: repeat(5,1fr);
 }
