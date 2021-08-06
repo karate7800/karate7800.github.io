@@ -26,6 +26,8 @@ nav p {
 .subsection {
   border:1px solid white;
   border-radius: 1em;
+  width: 85%;
+  margin-left: 5%;
 }
 .subsection, .subsection * {
   background-color: rgb(14, 11, 22);
