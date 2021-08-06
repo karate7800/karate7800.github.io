@@ -5,7 +5,9 @@
   background-color:rgb(57, 255, 20);
 
 }
-
+.section * {
+  margin: auto;
+}
 .section {
   border:1px solid black;
   border-radius: .5em;
