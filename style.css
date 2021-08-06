@@ -24,3 +24,10 @@ nav p {
   text-align: center;
   background-color: lightblue;
 }
+.subsection {
+  border:1px solid black;
+  border-radius: 1em;
+}
+.subsection, .subsection * {
+  background-color: rgb(57, 255, 20);
+}
