@@ -1,10 +1,14 @@
  nav {
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: repeat(6, 1fr);
 	border:1px solid black;
 	border-radius: .5em;
 	height:2.5em;
 	background-image: linear-gradient(to bottom right, lightblue, white);
+
+}
+nav:hover {
+	cursor: default;
 }
 
 nav li {
