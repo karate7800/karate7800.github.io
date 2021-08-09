@@ -7,14 +7,18 @@
 	background-image: linear-gradient(to bottom right, lightblue, white);
 
 }
+
+
+nav  li {
+	margin: auto;
+	list-style: none;
+}
+
 nav:hover {
 	cursor: default;
 }
 
-nav li {
-	list-style: none;
-	margin:auto;
-}
+
 .maintitle {
 	text-align: center;
 
