@@ -2,13 +2,36 @@
     border: 1px solid black;
     border-radius: 5px;
 }
+.section p {
+    margin-left: 1em;
+}
 .grad {
     background-image: linear-gradient(to bottom right,white, red);
 }
 .secdiv {
     text-align: center;
-    width: fit-content;
+    /* width: fit-content; */
+}
+.secdiv img {
+    border-radius: 5px;
 }
 h2 {
+    text-align: center;
+}
+.decolor {
+    color:black;
+}
+.linktable {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+}
+.linktable * {
+    text-align: center; 
+}
+.linktable p {
+    text-align: left;
+}
+.logo {
     text-align: center;
 }
