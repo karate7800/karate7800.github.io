@@ -8,15 +8,15 @@
 
 }
 
-<<<<<<< HEAD
+
 .section * {
   padding-left: 5px;
-=======
+}
 
-nav  li {
+nav li {
 	margin: auto;
 	list-style: none;
->>>>>>> 79745291affd3a02fec11b96b2d3c16da122e486
+
 }
 
 nav:hover {
