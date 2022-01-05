@@ -9,7 +9,7 @@ if(!document.cookie.includes('ans')) {
     for(var i=0;i<questions;i++) {
         lets+='E'
     }
-    document.cookie = 'ans ='+lets+';time='+Time.getTime();
+    document.cookie = 'ans='+lets+';time='+Time.getTime();
 
 }
 
@@ -23,7 +23,7 @@ if(!document.cookie.includes('ans')) {
 //to update with the proper value
 function selOption(selected) {
     let qNum = selected[1]
-    let ans = document.cookie.split(';').find(row => row.startsWith('ans=')).split('=')[1]
+    let ans = document.cookie.split(';').find(row => row.startsWith('ans=') || row.startsWith(' ans')).split('=')[1]
     ans[qNum - 1] = selected[2] 
 }
 
