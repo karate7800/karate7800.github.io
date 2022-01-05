@@ -31,8 +31,10 @@ if(!document.cookie.includes('ans=')) {
 //to update with the proper value
 function selOption(selected) {
     var qNum = parseInt(selected[1])
-    var curanswers = document.cookie.split(';').find(row => row.startsWith('ans=') || row.startsWith(' ans=')).split('=')[1]
-    curanswers = curanswers[0, qNum-1] + selected[2]+curanswers[qNum,curanswers.length]
-    document.cookie = 'ans='+curanswers
-}
+    var origval = document.cookie.split(';').find(row => row.startsWith('ans=')).substring(4)
+    origval = origval.substring(0, qNum-1)+selected[2] + origval.substring(qNum);
 
+    document.cookie = 'ans='+origval+';'
+    
+
+}
