@@ -4,7 +4,7 @@ const maxtime = 300;
 
 var Time = new Date()
 
-if(!document.cookie.contains('ans')) {
+if(!document.cookie.includes('ans')) {
     var lets = ''
     for(var i=0;i<questions;i++) {
         lets+='E'
