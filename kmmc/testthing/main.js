@@ -11,19 +11,14 @@ if(!document.cookie.includes('ans=')) {
         lets+='X'
     }
     document.cookie = 'ans='+lets+';time='+Time.getTime();
-} else if(document.cookie.indexOf('ans=')) {
-
-    let temp = document.cookie.indexOf('ans=');
-    if(document.cookie[temp+4] == 'E') {
-
-        console.log('in here')
-        var lets = ''
-        for(var i=0;i<questions;i++) {
-            lets+='X'
-        }
-        document.cookie = 'ans='+lets+';time='+Time.getTime();
-        
+} else if (document.cookie[document.cookie.indexOf('ans=')+4] == 'E') {
+      console.log('in here')
+    var lets = ''
+    for(var i=0;i<questions;i++) {
+        lets+='X'
     }
+    document.cookie = 'ans='+lets+';time='+Time.getTime();
+    
 }
 
 
@@ -36,8 +31,10 @@ if(!document.cookie.includes('ans=')) {
 //to update with the proper value
 function selOption(selected) {
     var qNum = parseInt(selected[1])
-    var ans = document.cookie.split(';').find(row => row.startsWith('ans=') || row.startsWith(' ans=')).split('=')[1]
-    ans = ans[0, qNum-1] + selected[2]+ans[qNum,ans.length]
-    document.cookie = 'ans='+ans
-}
+    var origval = document.cookie.split(';').find(row => row.startsWith('ans=')).substring(4)
+    origval = origval.substring(0, qNum-1)+selected[2] + origval.substring(qNum);
 
+    document.cookie = 'ans='+origval+';'
+    
+
+}
