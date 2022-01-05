@@ -11,7 +11,14 @@ if(!document.cookie.includes('ans=')) {
         lets+='X'
     }
     document.cookie = 'ans='+lets+';time='+Time.getTime();
-
+} else if (document.cookie[document.cookie.indexOf('ans=')+4] == 'E') {
+      console.log('in here')
+    var lets = ''
+    for(var i=0;i<questions;i++) {
+        lets+='X'
+    }
+    document.cookie = 'ans='+lets+';time='+Time.getTime();
+    
 }
 
 
