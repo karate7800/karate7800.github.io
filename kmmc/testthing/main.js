@@ -7,7 +7,7 @@ var Time = new Date()
 if(!document.cookie.includes('ans')) {
     var lets = ''
     for(var i=0;i<questions;i++) {
-        lets+='E'
+        lets+='X'
     }
     document.cookie = 'ans='+lets+';time='+Time.getTime();
 
@@ -22,9 +22,9 @@ if(!document.cookie.includes('ans')) {
 
 //to update with the proper value
 function selOption(selected) {
-    var qNum = selected[1]
+    var qNum = parseInt(selected[1])
     var ans = document.cookie.split(';').find(row => row.startsWith('ans=') || row.startsWith(' ans=')).split('=')[1]
-    ans[qNum - 1] = selected[2] 
+    ans = ans[0, qNum-1] + selected[2]+ans[qNum,ans.length]
     document.cookie = 'ans='+ans
 }
 
