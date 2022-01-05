@@ -1,4 +1,4 @@
-console.log('yes?')
+
 const questions = 5;
 const maxtime = 300;
 
