@@ -1,5 +1,5 @@
 console.log('yes?')
-const questions = 1;
+const questions = 5;
 const maxtime = 300;
 
 var Time = new Date()
