@@ -48,8 +48,16 @@ function selOption(selected) {
     var qNum = parseInt(selected[1])
     var origval = document.cookie.split(';').find(row => row.startsWith('ans=')).substring(4)
     origval = origval.substring(0, qNum-1)+selected[2] + origval.substring(qNum);
+<<<<<<< HEAD
 
     document.cookie = 'ans='+origval+';'
     
 
 }
+=======
+
+    document.cookie = 'ans='+origval+';'
+    
+
+}
+>>>>>>> 35a4b18d4fefb0fda7ef28ca9626f4624ad2aa5d
