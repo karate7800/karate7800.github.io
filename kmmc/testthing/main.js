@@ -32,6 +32,7 @@ if(!document.cookie.includes('ans=')) {
 
 //to initially fill set boxes
 function autoFill() {
+    var x = document.cookie.split(';').find(row => row.startsWith('ans=')).substring(4);
 
     for(var i=0;i<x.length;i++) {
         if( x[i] != 'X') {
