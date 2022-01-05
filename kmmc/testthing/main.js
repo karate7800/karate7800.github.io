@@ -1,3 +1,4 @@
+console.log('yes?')
 const questions = 1;
 const maxtime = 300;
 
@@ -21,9 +22,9 @@ if(!document.cookie.includes('ans')) {
 
 //to update with the proper value
 function selOption(selected) {
-    var qNum = selected[1]
+    var qNum = Integer.parseInt(selected[1])
     var ans = document.cookie.split(';').find(row => row.startsWith('ans=') || row.startsWith(' ans=')).split('=')[1]
-    ans = ans[0, qNum] + selected[2]+ans[qNum,ans.length]
+    ans = ans[0, qNum-1] + selected[2]+ans[qNum,ans.length]
     document.cookie = 'ans='+ans
 }
 
