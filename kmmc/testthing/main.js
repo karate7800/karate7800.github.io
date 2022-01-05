@@ -1,4 +1,4 @@
-console.log('yes?')
+
 const questions = 5;
 const maxtime = 300;
 
@@ -19,6 +19,8 @@ if(!document.cookie.includes('ans=')) {
     }
     document.cookie = 'ans='+lets+';time='+Time.getTime();
     
+} else {
+    autoFill();
 }
 
 
@@ -27,6 +29,19 @@ if(!document.cookie.includes('ans=')) {
 //to retreive a cookie "alpha"
 // document.cookie.split(';').find(row => row.startsWith('alpha=')).split('=')[1]
 
+
+//to initially fill set boxes
+function autoFill() {
+    var x = document.cookie.split(';').find(row => row.startsWith('ans=')).substring(4);
+
+    for(var i=0;i<x.length;i++) {
+        if( x[i] != 'X') {
+            let chekbox = document.getElementById('q'+(i+1)+x[i]);
+            chekbox.checked = true;
+        }
+    
+    }
+}
 
 //to update with the proper value
 function selOption(selected) {
