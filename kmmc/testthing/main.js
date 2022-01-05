@@ -1,9 +1,10 @@
+console.log('yes?')
 const questions = 1;
 const maxtime = 300;
 
 var Time = new Date()
 
-if(!document.cookie.contains(ans)) {
+if(!document.cookie.contains('ans')) {
     var lets = ''
     for(var i=0;i<questions;i++) {
         lets+='E'
