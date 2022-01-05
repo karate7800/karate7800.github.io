@@ -23,7 +23,7 @@ if(!document.cookie.contains('ans')) {
 //to update with the proper value
 function selOption(selected) {
     let qNum = selected[1]
-    let ans = document.cookie.split(';').find(row => row.startsWith('ans=').split('=')[1])
+    let ans = document.cookie.split(';').find(row => row.startsWith('ans=')).split('=')[1]
     ans[qNum - 1] = selected[2] 
 }
 
