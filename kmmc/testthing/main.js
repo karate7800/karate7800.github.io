@@ -30,7 +30,7 @@ function initSetup() {
     if(!document.cookie.includes('endtime=')) {
         t = Time.getTime()
         document.cookie = 'endtime='+ (t+maxtime);
-        const endtime = t+maxtime;
+       
         document.cookie = 'curtime='+t;
     }
 
@@ -74,7 +74,7 @@ function selOption(selected) {
 function updateTime() {
     t = new Date().getTime();
     document.cookie = 'curtime='+t;
-    document.getElementById("timer").innerText = endtime - t;
+    document.getElementById("timer").innerText = document.cookie.split(';').find(row => row.startsWith('endtime=')).split('=')[1] - t;
 }
     
 
