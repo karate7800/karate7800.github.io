@@ -3,7 +3,7 @@ const questions = 5;
 const maxtime = 300;
 
 var Time = new Date()
-window.onload(function() {
+window.onload = (function() {
     initSetup()
 });
 
