@@ -1,7 +1,7 @@
 
 const questions = 5;
 const maxtime = 300;
-
+var t;
 var Time = new Date()
 window.onload = (function() {
     initSetup()
@@ -14,18 +14,27 @@ function initSetup() {
         for(var i=0;i<questions;i++) {
             lets+='X'
         }
-        document.cookie = 'ans='+lets+';time='+Time.getTime();
+        document.cookie = 'ans='+lets;
     } else if (document.cookie[document.cookie.indexOf('ans=')+4] == 'E') {
           console.log('in here')
         var lets = ''
         for(var i=0;i<questions;i++) {
             lets+='X'
         }
-        document.cookie = 'ans='+lets+';time='+Time.getTime()+';';
+        document.cookie = 'ans='+lets+';time='+(new Date().getTime())+';';
         
     } else {
         autoFill();
     }
+
+    if(!document.cookie.includes('endtime=')) {
+        t = Time.getTime()
+        document.cookie = 'endtime='+ (t+maxtime);
+        const endtime = t+maxtime;
+        document.cookie = 'curtime='+t;
+    }
+
+
 }
 
 
@@ -62,5 +71,11 @@ function selOption(selected) {
 
 }
 
+function updateTime() {
+    t = new Date().getTime();
+    document.cookie = 'curtime='+t;
+    document.getElementById("timer").innerText = endtime - t;
+}
     
 
+setInterval(updateTime, 1000)
