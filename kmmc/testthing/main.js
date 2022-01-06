@@ -62,7 +62,5 @@ function selOption(selected) {
 
 }
 
-
-    document.cookie = 'ans='+origval+';'
     
 
