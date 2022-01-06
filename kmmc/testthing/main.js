@@ -33,14 +33,10 @@ if(!document.cookie.includes('ans=')) {
 //to initially fill set boxes
 function autoFill() {
     var x = document.cookie.split(';').find(row => row.startsWith('ans=')).substring(4);
-
-    for(var i=0;i<x.length;i++) {
-        if( x[i] != 'X') {
-            let chekbox = document.getElementById('q'+(i+1)+x[i]);
-            chekbox.checked = true;
-        }
-    
+    for(var i=0;i<questions;i++) {
+        if(x[i] != 'X') document.getElementById('q'+(i+1)+x[i]).checked = true;
     }
+        
 }
 
 //to update with the proper value
