@@ -3,24 +3,29 @@ const questions = 5;
 const maxtime = 300;
 
 var Time = new Date()
+document.onload(function() {
+    initSetup()
+});
 
-if(!document.cookie.includes('ans=')) {
-    console.log('in here')
-    var lets = ''
-    for(var i=0;i<questions;i++) {
-        lets+='X'
+function initSetup() {
+    if(!document.cookie.includes('ans=')) {
+        console.log('in here')
+        var lets = ''
+        for(var i=0;i<questions;i++) {
+            lets+='X'
+        }
+        document.cookie = 'ans='+lets+';time='+Time.getTime();
+    } else if (document.cookie[document.cookie.indexOf('ans=')+4] == 'E') {
+          console.log('in here')
+        var lets = ''
+        for(var i=0;i<questions;i++) {
+            lets+='X'
+        }
+        document.cookie = 'ans='+lets+';time='+Time.getTime()+';';
+        
+    } else {
+        autoFill();
     }
-    document.cookie = 'ans='+lets+';time='+Time.getTime();
-} else if (document.cookie[document.cookie.indexOf('ans=')+4] == 'E') {
-      console.log('in here')
-    var lets = ''
-    for(var i=0;i<questions;i++) {
-        lets+='X'
-    }
-    document.cookie = 'ans='+lets+';time='+Time.getTime()+';';
-    
-} else {
-    autoFill();
 }
 
 
@@ -37,6 +42,7 @@ function autoFill() {
     for(var i=0;i<questions;i++) {
         let alpha = 'q'+(i+1)+''+x[i]
         if(x[i] != 'X') {
+            console.log(alpha)
             document.getElementById(alpha).checked = true;
 
         }
