@@ -7,6 +7,13 @@
     <script src="./index.js" defer></script>
     <link rel="stylesheet" href="">
     <title>Document</title>
+
+    <style>
+        .options {
+            display: flex;
+
+        }
+    </style>
 </head>
 <body>
     <h1 id="h1">Test</h1>
@@ -19,5 +26,13 @@
     </form>
 
     <canvas style="border: 1px solid black; width: 80%; margin: auto;" id="canvas"></canvas>
+   
+
+    <div class="options">
+        <button type="button" id="mvbut">Move</button>
+        <button type="button" id="plbut">Place</button>
+    </div>
+
+    <div id="plist"></div>
 </body>
 </html>
