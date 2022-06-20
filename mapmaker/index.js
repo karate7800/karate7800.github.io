@@ -1,11 +1,13 @@
 
 let form = document.getElementById("photo")
 let but = document.getElementById("psub")
+
 const h1 =document.getElementById('h1')
 const canv = document.getElementById('canvas')
 const ctx = canv.getContext('2d')
-
-  const sub = function () {
+ 
+h1.innerText = 'nope'
+   function sub() {
     const data  = document.getElementById("shit")
     let rp = data.value
     let img = new Image()
