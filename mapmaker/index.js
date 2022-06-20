@@ -5,8 +5,8 @@ const canv = document.getElementById('canvas')
 const ctx = canv.getContext('2d')
 
   const sub = function () {
-    let fDate = new FormData(form)
-    let rp = fDate['imgpro']
+    const data  = document.getElementById("shit")
+    let rp = data.value
     h1.innerText = (rp)
     ctx.drawImage(rp, 40, 40)
 }
