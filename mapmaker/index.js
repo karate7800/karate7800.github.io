@@ -1,6 +1,6 @@
 let form = document.getElementById("photo")
 let but = document.getElementById("psub")
-const h1 =document.getElementsByTagName('h1')[0]
+const h1 =document.getElementById('h1')
 const canv = document.getElementById('canvas')
 const ctx = canv.getContext('2d')
 
