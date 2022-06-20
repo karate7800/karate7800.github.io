@@ -1,3 +1,5 @@
+
+alert('js ran')
 let form = document.getElementById("photo")
 let but = document.getElementById("psub")
 const h1 =document.getElementById('h1')
