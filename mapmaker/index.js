@@ -1,23 +1,21 @@
 
 let form = document.getElementById("photo")
 let but = document.getElementById("psub")
-
+const inp = document.getElementById('shit')
 const h1 =document.getElementById('h1')
 const canv = document.getElementById('canvas')
 const ctx = canv.getContext('2d')
  
+inp.addEventListener('click', handleFiles)
 h1.innerText = 'nope'
-   function sub() {
-    const data  = document.getElementById("shit")
-    let rp = data.value
+   function handleFiles(e) {
+    const data = e.target.files[0]
     let img = new Image()
-    img.src = URL.createObjectURL(rp)
-    h1.innerText = "dogshit"
-    
-    ctx.drawImage(img, 40, 40)
-
-
-    alert('drew image')
+    img.onload = function() {
+        ctx.drawImage(img,20,20)
+        alert('image drawn')
+    }
+    img.src = URL.createObjectURL(data)
 }
 
 
