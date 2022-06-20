@@ -38,10 +38,11 @@ function handleFiles(e) {
     let img = new Image()
     img.width = canv.width
     img.onload = function() {
-        ctx.drawImage(img,0, 0)
-        alert('image drawn')
+        ctx.drawImage(img,0, 0, canv.width, canv.height)
+        
     }
     img.src = URL.createObjectURL(data)
+
 }
 
 function updatePointList(loc) {
