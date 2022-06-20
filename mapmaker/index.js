@@ -36,8 +36,9 @@ h1.innerText = 'nope'
 function handleFiles(e) {
     const data = e.target.files[0]
     let img = new Image()
+    img.width = canv.width
     img.onload = function() {
-        ctx.drawImage(img,20,20)
+        ctx.drawImage(img,0, 0)
         alert('image drawn')
     }
     img.src = URL.createObjectURL(data)
