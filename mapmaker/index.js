@@ -21,7 +21,9 @@ canv.addEventListener('click', function(e) {
   y = e.pageY - canvtop
 
   let name = prompt('What is this location\'s name?')
-  points.push(new Location(name, x, y))
+  let loc = new Location(name, x, y)
+  points.push(loc)
+  updatePointList(loc)
 
 }, false)
 inp.addEventListener('change', handleFiles)
