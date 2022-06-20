@@ -1,5 +1,4 @@
 
-alert('js ran')
 let form = document.getElementById("photo")
 let but = document.getElementById("psub")
 const h1 =document.getElementById('h1')
@@ -13,7 +12,9 @@ const ctx = canv.getContext('2d')
     img.src = URL.createObjectURL(rp)
     h1.innerText = "dogshit"
     
-    ctx.drawImage(rp, 40, 40)
+    ctx.drawImage(img, 40, 40)
+
+
     alert('drew image')
 }
 
