@@ -56,4 +56,8 @@ class Location {
     this.x = x
     this.y = y
   }
+   toString() {
+    return 'name:'+this.name +', x:'+this.x+', y:'+this.y
+
+  }
 }
