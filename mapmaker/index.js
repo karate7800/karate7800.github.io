@@ -10,11 +10,10 @@ const pList = document.getElementById('plist')
 const canv = document.getElementById('canvas')
 const ctx = canv.getContext('2d')
 let mStatus = null
-
-
 let canvleft = canv.offsetLeft + canv.clientLeft
 let canvtop = canv.offsetTop + canv.clientTop
 
+const mapDiv = document.getElementById('map')
 let points = []
 canv.addEventListener('click', function(e) {
   let x = e.pageX - canvleft,
@@ -62,3 +61,16 @@ class Location {
 
   }
 }
+
+var map = new ol.Map({
+  target: 'map',
+  layers: [
+    new ol.layer.Tile({
+      source: new ol.source.OSM()
+    })
+  ],
+  view: new ol.View({
+    center: ol.proj.fromLonLat([37.41, 8.82 ]),
+    zoom: 4
+  })
+})
