@@ -25,7 +25,7 @@ header a:visited {
     
 }
 .lasttransactions:last-child:last-of-type(.transaction){
-    background-color: red;
+    background-color: red !important;
 }
 .transheader, .transaction{
     display: grid;
