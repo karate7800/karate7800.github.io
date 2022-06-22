@@ -21,13 +21,9 @@ header a:visited {
     border: 1px solid black;
     border-radius: 5px;
     background-color: rgb(150,150,150);
+}
 
-    
-}
-.lasttransactions:last-child:last-of-type(.transaction){
-    background-color: red !important;
-}
-.transheader, .transaction{
+ .transaction{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     border-bottom: 1px solid black;
