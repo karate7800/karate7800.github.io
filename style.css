@@ -31,6 +31,3 @@ header a:visited {
     height: 1em;
     margin-inline: auto;
 }
-.transaction:last-of-type {
-    border-bottom: none;
-}
