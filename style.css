@@ -1,12 +1,19 @@
 header {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .lasttransactions {
     height: 5em;
     width: 80%;
     margin-inline: auto;
+    border: 1px solid black;
+    border-radius: 5px;
 }
 .transaction {
     display: flex;
+    border-bottom: 1px solid black;
+}
+.transaction:last-of-type {
+    border-bottom: none;
 }
