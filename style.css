@@ -5,6 +5,7 @@ header {
     border-radius: 5px;
     color: white;
     position: sticky;
+    height: 1em;
     top: 0;
 }
 header a {
