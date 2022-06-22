@@ -1,10 +1,14 @@
 header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    background-color: navy;
+    border-radius: 5px;
+    color: white;
+    position: sticky;
+    top: 0;
 }
 
 .lasttransactions {
-    height: 5em;
     width: 80%;
     margin-inline: auto;
     border: 1px solid black;
