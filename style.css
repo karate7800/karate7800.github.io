@@ -9,6 +9,7 @@ header {
     margin-inline: auto;
     border: 1px solid black;
     border-radius: 5px;
+    justify-content: space-between;
 }
 .transaction {
     display: flex;
