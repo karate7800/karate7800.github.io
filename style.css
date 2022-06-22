@@ -24,7 +24,7 @@ header a:visited {
 
     
 }
-.lasttransactions:last-child {
+.lasttransactions:last-child .transaction{
     background-color: red;
 }
 .transheader, .transaction{
