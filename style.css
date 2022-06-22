@@ -17,10 +17,12 @@ table {
     border-collapse: collapse;
     margin: auto;
 }
+.tabsection {
+    margin-bottom: 2em;
+}
 main {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
     border: 1px solid black;
     border-radius: 5px;
 }
