@@ -24,7 +24,7 @@ header a:visited {
 
     
 }
-.transaction, .transheader {
+.transheader, .transaction{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     border-bottom: 1px solid black;
