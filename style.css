@@ -21,6 +21,7 @@ header a:visited {
     border: 1px solid black;
     border-radius: 5px;
     background-color: rgb(150,150,150);
+    height: fit-content;
     
 }
 .transaction, .transheader {
