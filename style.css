@@ -4,6 +4,9 @@ header {
     background-color: navy;
     color: white;
 }
+header a:visited {
+    color: white;
+}
 
 td, th {
     border: 1px solid black;
