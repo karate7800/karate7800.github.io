@@ -3,6 +3,8 @@ header {
     grid-template-columns: repeat(3, 1fr);
     background-color: navy;
     color: white;
+    margin-inline: auto;
+    text-decoration: none;
 }
 header a:visited {
     color: white;
