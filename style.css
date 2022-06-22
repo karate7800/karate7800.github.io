@@ -3,7 +3,9 @@ header {
     grid-template-columns: repeat(3, 1fr);
     background-color: navy;
     color: white;
-    margin-inline: auto;
+    text-align: center;
+}
+header a {
     text-decoration: none;
 }
 header a:visited {
@@ -27,7 +29,9 @@ main {
     justify-content: space-between;
     border: 1px solid black;
     border-radius: 5px;
+    text-align: center;
 }
+
 
 .tabsection {
     background-color: rgb(200,200,200);
