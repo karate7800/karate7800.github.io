@@ -4,7 +4,15 @@ form button {
     background-color: navy;
     transition: 2s all ease-in;
 }
-form {
+.questions {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+
+fieldset {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+fieldset legend {
+    grid-column-end: 2;
 }

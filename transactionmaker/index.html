@@ -11,14 +11,13 @@
     <h1>Add a Transaction</h1>
     <form action="" id="transacform">
     
+     
+        <div class="questions">
+
         
         <label for="name">Transaction Name*</label>
         <input id="name" placeholder="Monthly Bonus" name="name" type="text" required>
         
-
-
-        
-
         
         <label for="desc">Description</label>
         <input type="text" id="desc">
@@ -36,8 +35,19 @@
         <label for="amt">Amount $</label>
         <input type="number">
         
+        </div>
+
+        <fieldset>
+            <legend>Is this an expense or an earning?</legend>
+
+            <label for="cost">Expense</label>
+            <input type="radio" name="cost" id="cost">
+
+            <label for="earning">Earning</label>
+            <input type="radio" name="cost" id="earning">
+        </fieldset>
         
-        <button>Submit</button>
+        <button style="text-align: center;">Submit</button>
     </form>
 </body>
 </html>
