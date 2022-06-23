@@ -1,5 +1,10 @@
 form button {
     border-radius: 5px;
-    background-color: lightblue;
+    color: white;
+    background-color: navy;
     transition: 2s all ease-in;
+}
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
