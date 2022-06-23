@@ -2,6 +2,7 @@ form button {
     border-radius: 5px;
     color: white;
     background-color: navy;
+    padding: 5px;
     transition: 2s all ease-in;
 }
 .questions {
